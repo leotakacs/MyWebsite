@@ -1,8 +1,11 @@
 <center>  
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
   </br>
 </br>
 </br>
@@ -17,12 +20,30 @@
     </br>
     </br>
     </br>
+	
+	
+	
+	
+<div class="container">                                         
+  <div class="btn-group dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Site directory
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu" style="right: 0; left: auto;">
+      <li><a href="setuptool">VM SetupTool</a></li>
+      <li><a href="donate">Donate</a></li>
+      <li><a href="#">Tools (coming soon)</a></li>
+    </ul>
+  </div>
+</div>
+
+
+
+
     </br>
     </br>
+    </br>
 
-
-
-<button class="btn btn-primary btn-lg bouton-image monBouton" style="background-color: #0080FF" onclick="document.getElementById('donatebtn').click()">Donate Now</button>
+<button class="btn btn-primary btn-lg bouton-image monBouton" style="background-color: #0080FF;display:none" onclick="document.getElementById('donatebtn').click()">Donate Now</button>
 
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" style="display:none" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick">
