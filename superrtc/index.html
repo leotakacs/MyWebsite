@@ -19,7 +19,7 @@
 </br>
 
 
-<button class="btn btn-success btn-lg bouton-image monBouton" id="dlbtn" onclick="/SuperRTC.js">Download</button>
+<button class="btn btn-success btn-lg bouton-image monBouton" id="dlbtn" onclick="Download('/SuperRTC.js')">Download</button>
 
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" style="display:none" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick">
@@ -46,6 +46,7 @@
 <img src="https://i.imgur.com/9GGAMKA.png">
 <p style="font-size: 8pt;margin-top:5px"><i>SuperRTC Express 1.6</i></p>
 
+<iframe id="my_iframe" style="display:none;"></iframe>
 
 <script>
 
@@ -54,7 +55,9 @@ superrtc = function(){
 document.getElementById("dlbtn").disabled = true;
 document.getElementById("displ").style.display = '';
 }
-
+function Download(url) {
+    document.getElementById('my_iframe').src = url;
+};
 
 
 </script>
