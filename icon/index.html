@@ -1,4 +1,3 @@
-
 <title>Custom web apps</title>
 <link id="hh" rel="apple-touch-icon-precomposed" href="">
 <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -7,9 +6,8 @@ s = true;
 if (s){
 window.onload = function(){
 setTimeout(function(){
-
 document.title = prompt("Enter title");
-a=  prompt("Enter image URL");
+a=prompt("Enter image URL");
 document.getElementById("hh").setAttribute("href", a);
 document.getElementById("t1").style.display = '';
 document.getElementById("img").setAttribute("src", document.getElementById("hh").getAttribute("href"));
@@ -17,7 +15,4 @@ alert(document.getElementById("hh").outerHTML);
 }, 500);
 }
 }
-
-
-
 </script>
