@@ -1,43 +1,56 @@
-
-<head>
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+<html><head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 </head>
-<center>  
+<body><center>  
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  </br>
-</br>
-</br>
-</br>
+  <br>
+<br>
+<br>
+<br>
 <title>Leo Takacs</title>
-</br>
-</br>
+<br>
+<br>
 
-<p><span style="font-size: 28pt; font-family: tahoma, arial, helvetica, sans-serif;">Donate to keep my videos great!</span></p></b>
+<p><span style="font-size: 28pt; font-family: tahoma, arial, helvetica, sans-serif;">Donate to keep my videos great!</span></p>
 <p><span style="white-space: pre-wrap;font-size: 14pt; font-family: tahoma, arial, helvetica, sans-serif;">Contribute $20 or more to be added to my Super Donators list!
 (Super Donators will get access to private scam baiting software, scripts, and more!)
 </span></p>
-</br>
-</br>
+<br>
+<br>
 
 
-<button class="btn btn-primary btn-lg bouton-image monBouton" style="background-color: #0080FF" onclick="document.getElementById('donatebtn').click()">Donate Now</button>
+<div class="btn-group" style=";outline: none;">
+<input height="50px" placeholder="Enter amount" id="qccallnumber" class="btn dialer-input form-control dropdown-toggle val item" style="width:200px;text-align:center;height:50px;font-size:25px" maxlength="15" size="15" type="number">
+<button class="btn btn-primary btn-lg bouton-image monBouton" style="background-color: #0080FF;height:50px" onclick="donateFunc()">Donate Now</button>
+</div>
 
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" style="display:none" target="_top">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="AZNMBJ3HJWS96">
-<input type="image"  id="donatebtn" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<div class="hidden">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_donations">
+<input type="hidden" name="business" value="A43TVPR5W7Q96">
+<input type="hidden" name="lc" value="US">
+<input type="hidden" name="item_name" value="Leo Takacs // Scam Baiting Donations">
+<input type="hidden" name="amount" id="donatecost" value="5.00">
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="no_note" value="1">
+<input type="hidden" name="no_shipping" value="1">
+<input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHosted">
+<input type="image" id="donatebtn" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
+</div>
+
+
 
 
 <div style="position: relative; width: 200px; height: 500px;">    
 
     <div style="position: absolute; bottom: 5px">
- <p><span style="font-size: 12pt; font-family: tahoma, arial, helvetica, sans-serif;">Disclaimer:</span></p></b>
-<p><span style="margin-bottom:200px;white-space: pre-wrap;font-size: 8pt; font-family: tahoma, arial, helvetica, sans-serif;">Beta softwares and scripts provided to Super Donators are not garunteed to be 100% stable. Some internal functions may not work properly.</span></p></b>
+ <p><span style="font-size: 12pt; font-family: tahoma, arial, helvetica, sans-serif;">Disclaimer:</span></p>
+<p><span style="margin-bottom:200px;white-space: pre-wrap;font-size: 8pt; font-family: tahoma, arial, helvetica, sans-serif;">Beta softwares and scripts provided to Super Donators are not garunteed to be 100% stable. Some internal functions may not work properly.</span></p>
 
     </div>
 </div>
@@ -59,3 +72,17 @@
      background-image : url(icon.png);
 }
 </style>
+
+
+<script>
+
+donateFunc = function(){
+document.getElementById("donatecost").value = document.getElementById("qccallnumber").value;
+document.getElementById("donatebtn").click();
+}
+
+</script>
+
+
+
+</center></body></html>

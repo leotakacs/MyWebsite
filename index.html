@@ -1,48 +1,47 @@
-<center>  
+<meta name="theme-color" content="#ffffff">
+<center> 
+
 
 <head>
+<link rel='shortcut icon' href='favicon.ico' type='image/x-icon' />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-  </br>
-</br>
-</br>
-</br>
 <title>Leo Takacs</title>
-<b><p><span style="font-size: 28pt; font-family: tahoma, arial, helvetica, sans-serif;">Leo Takacs // Scam Baiting</span></p></b>
-
+<div class="backgrounda-image"></div>
+</br>
+</br>
+</br>
+<body>
+<b><p><span style="font-size: 28pt; font-family: Impact;		display: inline;
+		font-family: Impact;
+		font-size: 85px;
+		color: #FFFFFF;
+		-webkit-text-stroke: 3px black;">Leo Takacs // Scam Baiting</span></p></b>
 
 
     </br>
-    </br>
 	
 	
 	
-	<span style="font-size: 14pt; font-family: tahoma, arial, helvetica, sans-serif;"></span>
+	<span style="font-size: 14pt; font-family: Impact"></span>
 	</br>
 
 	  
-	  
-	  <div class="panel panel-default" style="margin-left:20px;width:350px" width="50px">
-    <div class="panel-heading">
-        <b>
-            <h4>Site directory:
-        </b></h4>
-    </div>
-    <div class="panel-body" style="text-align:left;" width="75%"></br>
-        </br>
-		<div class="btn-group-vertical">
-		<li><a class="btn btn-link btn-lg" href="superrtc">SuperRTC</a></li>
-		<li><a class="btn btn-link btn-lg" href="tools">Tools</a></li>
-      <li><a class="btn btn-link btn-lg" href="donate">Donate</a></li>
-	  <li><a class="btn btn-link btn-lg" href="networkrat">Explaining the network RAT</a></li>
-	  
-      
 
-	  </div>
     </div>
+        </br>
+		<div class="btn-group">
+		<a class="btn-lg btn btn-default" style="background-color: #c4ffc1;" href="tools">Tools</a>
+		<a class="btn-lg btn btn-default" style="display:none" href="superrtc">SuperRTC</a>
+		<a class="btn-lg btn btn-default" style="display:none" href="networkrat">Explaining the network RAT</a>
+      <a class="btn-lg btn btn-default" href="donate">Donate</a>
+	  
+    </div>
+	
+	
 </div>
 
 
@@ -50,6 +49,20 @@
     </br>
     </br>
     </br>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<iframe id="youtube_video" width="600" height="340" frameborder="0" allowfullscreen></iframe>
+
+<script>
+var channelID = "UCOkhTr4FqEAWRz2UecVsh4g";
+$.getJSON('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.youtube.com%2Ffeeds%2Fvideos.xml%3Fchannel_id%3D'+channelID, function(data) {
+   var link = data.items[0].link;
+   var id = link.substr(link.indexOf("=")+1);
+    $("#youtube_video").attr("src","https://youtube.com/embed/"+id + "?controls=0&showinfo=0&rel=0");
+});
+</script>
+
 
 <button class="btn btn-primary btn-lg bouton-image monBouton" style="background-color: #0080FF;display:none" onclick="document.getElementById('donatebtn').click()">Donate Now</button>
 
@@ -59,21 +72,38 @@
 <input type="image"  id="donatebtn" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
-
+</body>
 <style>
-.bouton-image:before {
-    content: "";
-    width: 20px;
-    height: 20px;
-    display: inline-block;
-    margin-right: 5px;
-    vertical-align: text-top;
-    background-color: transparent;
-    background-position : center center;
-    background-repeat:no-repeat;
-}
 
-.monBouton:before{
-     background-image : url(icon.png);
-}
+
+
+	.background-image {
+		position: fixed;
+		z-index: 1;
+		display: block;
+		background-image: url("bg.png");
+		width: 100%;
+		height: 100%;
+		filter: blur(5px);
+		 z-index: -1;
+	}
+
+	div p {
+		display: inline;
+		font-family: Impact;
+		font-size: 256px;
+		color: #FFFFFF;
+		-webkit-text-stroke: 7px black;
+		content: '';
+		
+	}
+
+	body {
+		text-align: center;
+	}
+	
 </style>
+
+
+
+
